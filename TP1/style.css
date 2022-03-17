@@ -1,0 +1,76 @@
+
+:root{
+    --modal-duration: 1s;
+}
+body{
+   height: 100vh;
+   overflow: hidden;
+}
+#container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(221, 217, 217);
+}
+#left{
+    flex:3;
+    display: flex;
+}
+
+#right{
+    flex: 1;
+    height: 100%;
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+#divButton{
+    background-color: white;
+    border-radius: 5px;
+    height: 15%;
+    width: 100%;
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    border-radius: 15px;
+    padding: 1%;
+    font-size: x-large;
+    color: white;
+}
+#divButton2{
+   margin-left: 9%;
+    width: 100%;
+}
+#btn1{
+    background-color: rgb(40,167,69);
+}
+#btn2{
+    background-color: rgb(189,33,48);
+}
+#btn3{
+    background-color: rgb(255,193,7);
+}
+#btn4{
+    background-color: rgb(20,143,162);
+}
+#notif1{
+    background-color: rgb(40,167,69);
+}
+#notif2{
+    background-color: rgb(189,33,48);
+}
+#notif3{
+    background-color: rgb(255,193,7);
+}
+#notif4{
+    background-color: rgb(20,143,162);
+}
+.notif{
+    margin: 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 15%;
+}
