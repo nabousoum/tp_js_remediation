@@ -1,0 +1,186 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;  
+}
+.menu{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    background-color: rgb(52,58,64);
+}
+.menu.close{
+    width: 80px;
+}
+.menu.close p{
+    opacity: 0;
+}
+.menu.close .fa-solid.fa-angle-left{
+    opacity: 0;
+}
+.menu.close #searchIcon{
+    opacity: 0;
+}
+.menu.close #searchInput{
+    opacity: 0;
+}
+#blankPage{
+    display: flex;
+    flex: 4;
+}
+#blankPage{
+    margin-left: -8%;
+    margin-top: -2%;
+}
+#admin{
+flex: 1;
+border-bottom: 1px solid white;
+}
+#adminPic{
+flex: 1;
+border-bottom: 1px solid white;
+display: flex;
+}
+#generateTab{
+    display: flex;
+    flex-direction: column;
+    flex:8;
+}   
+#admin p{
+    margin-top: -10%;
+    margin-left: 35%;
+    font-size: x-large;
+    color: white;
+}
+#admin img{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+#adminPic img{
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 50%;
+}
+#adminPic p{
+    margin-left: 5%;
+    font-size: x-large;
+    color: white;
+}
+#generateTab{
+    display: flex;
+    flex-direction: column;
+}
+#search{
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    flex: 1;
+    display: flex;
+}
+.elSideBar{
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    flex: 1;
+}
+.elSideBar:hover{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(51,147,255);
+}
+#charts{
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    flex-direction: column;
+    flex:1;
+ 
+}
+#adminPics{
+    border-radius: 50%;
+}
+#chart1{
+    flex: 1;
+    display: flex;
+}
+#chart1:hover{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(51,147,255);
+}
+
+.chart{
+    flex: 2;
+    margin-left: 20%;
+    background-color: aqua;
+    /* display: none;  */
+}
+.elSideBar.th{
+    display: block;
+}
+
+#examples{
+    flex: 5;
+}
+#search input{
+    margin-top: -2%;
+    height: 70%;
+    margin-left: 5%;
+    width: 70%;
+    background-color: rgb(85, 95, 105);
+} 
+#searchIcon{
+    margin-top: -1%;
+    height: 65%;
+    width: 20%;
+    background-color: rgb(85, 95, 105);
+}
+#searchIcon img{
+    margin-top: 5%;
+    margin-left: 20%;
+}
+ i{
+    margin-top: 2%;
+    margin-left: 10%;
+}
+#dashboard p{
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: x-large;
+    color: white;
+}
+ img{
+    margin-top: 2%;
+    margin-left: 10%;
+}
+ p{
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: x-large;
+    color: white;
+}
+.chart2{
+    display: flex;
+}
+.img2{
+
+  position: absolute;
+  border: 1px solid black;
+  left:17%;
+  top:52%;
+  width: 2%;
+  height: 3%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  color: white;
+}
+.fa-solid.fa-angle-left{
+   margin-left: 30%;
+   margin-top: 5%;
+}
