@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    width: 60%;
+    margin-top: 15%;
+    border-radius: 20px;
+    background-color: rgba(68, 47, 47, 0.589);
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.box .allTime {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: 6rem;
+    font-weight: 800;
+    color: aliceblue;
+    justify-content: center;	
+}
+h1{
+    color: aliceblue;
+    font-size: 6rem;
+}
+.box .allTime .wp {
+    align-items: center;
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 0 .375em;
+}
+.box .allTime .wp span {
+    color: aliceblue;
+    font-size: 2rem;
+}
