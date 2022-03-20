@@ -72,13 +72,31 @@ body{
 .imgSize{
     width: 100%;
 }
+.pStyle{
+    font-size: x-large;
+    color: #000000;
+}
 .imgMovie{
     display: flex;
     flex: 6;
     /* background-image: url('exemple.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
  
+}
+.textCentrer.vis{
+    visibility: visible;
+}
+.textCentrer{
+    visibility: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 90%;
+    height: 50%;
+    background-color: aliceblue;
+    position: absolute;
 }
 .nameMovie{
     flex: 1;

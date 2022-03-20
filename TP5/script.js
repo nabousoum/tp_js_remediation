@@ -12,16 +12,25 @@ fetch(url).then((reponse) =>
     reponse.json().then((data) => {
         const res = data.results;
         console.log(res);
+        let i = 0;
         res.forEach(element => {
+            i++;
             const div1 = document.createElement('div');
             div1.setAttribute('class','movie');
+            const idMov='id'+i;
+            div1.setAttribute('id',idMov);
 
             const div11 = document.createElement('div');
             div11.setAttribute('class','imgMovie');
             const img = document.createElement('img');
             img.src="https://image.tmdb.org/t/p/w1280"+element.poster_path;
             img.setAttribute('class','imgSize');
-
+            const divText = document.createElement('div');
+            divText.setAttribute('class','textCentrer');
+            const pText = document.createElement('p');
+            pText.setAttribute('class','pStyle');
+            pText.innerText=element.overview;
+           
             const div12 = document.createElement('div');
             div12.setAttribute('class','nameMovie');
 
@@ -40,9 +49,18 @@ fetch(url).then((reponse) =>
             div12.appendChild(div121);
             div12.appendChild(div122);
             div11.appendChild(img);
+            divText.appendChild(pText);
+            div11.appendChild(divText);
             div1.appendChild(div11);
             div1.appendChild(div12);
             movies.appendChild(div1);
+
+            const idMovs=document.getElementById(idMov);
+            if(idMovs){
+                idMovs.addEventListener('mouseover',function(){
+                  divText.classList.toggle('vis');
+               })
+            }
             
         });
         
