@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.box {
+.container {
     width: 60%;
     margin-top: 15%;
     border-radius: 20px;
@@ -17,8 +17,27 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
 }
-.box .allTime {
+.container:hover{
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+.container .date {
     align-items: center;
     display: flex;
     flex-wrap: nowrap;
@@ -32,14 +51,14 @@ h1{
     color: aliceblue;
     font-size: 6rem;
 }
-.box .allTime .wp {
+.container .date .wp {
     align-items: center;
     display: inline-flex;
     flex-flow: column wrap;
     justify-content: center;
     padding: 0 .375em;
 }
-.box .allTime .wp span {
+.container .date .wp span {
     color: aliceblue;
     font-size: 2rem;
 }
