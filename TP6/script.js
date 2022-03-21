@@ -1,7 +1,7 @@
 const cont2 = document.getElementById('cont2');
 const search = document.getElementById('search');
-
-
+const description = document.querySelector('.description');
+const generMeal = document.querySelector('.generateMeal');
 let api_filtre_by_id="https://www.themealdb.com/api/json/v1/1/lookup.php?i=52913";
 let api_filtre_by_name="https://www.themealdb.com/api/json/v1/1/search.php?s=Brie";
 let generate_meals="https://www.themealdb.com/api/json/v1/1/random.php";
@@ -18,7 +18,6 @@ function getRandomMeals(url){
     })
   );
 }
-
 
     function showMeal(data){
        // console.log(data);
@@ -76,14 +75,55 @@ function getRandomMeals(url){
          e.preventDefault();
         //if(e.target.classList.contains('fa-solid fa-heart fa-2x')){
             let mealItem = e.target.parentElement.parentElement;
-           // console.log(mealItem);
+           //console.log(mealItem);
             fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
             .then(response => response.json())
             .then( data => {
+                console.log(data.meals)
                 mealRecipeModel(data.meals)
             })
         }
      function mealRecipeModel(meal){
         // console.log(meal);
          meal=meal[0];
+
+         const div = document.createElement('div');
+         div.setAttribute('id','title');
+         const h1 = document.createElement('h1');
+         h1.innerText=meal.strMeal;
+         const span = document.createElement('span');
+         span.innerText='X';
+
+        const div2 = document.createElement('div');
+        div2.setAttribute('id','imgDesc');
+        const img = document.createElement('img');
+        img.src= meal.strMealThumb;
+
+        const div3 = document.createElement('div');
+        div3.setAttribute('id','reciepe');
+        const p = document.createElement('p');
+        p.innerText=meal.strInstructions;
+        const p2 = document.createElement('p');
+        p2.innerText='Ingredients';
+        const ul = document.createElement('ul');
+        const li = document.createElement('li');
+        li.innerText=meal.strIngredient1;
+
+
+        ul.appendChild(li);
+        div3.appendChild(p);
+        div3.appendChild(p2);
+        div3.appendChild(ul);
+        div2.appendChild(img)
+        div.appendChild(h1);
+        div.appendChild(span);
+        description.appendChild(div);
+        description.appendChild(div2);
+        description.appendChild(div3);
+        description.style.display='block';
+        console.log(description);
+         span.addEventListener('click',function(){
+            description.style.display='none';
+        })
+
      }

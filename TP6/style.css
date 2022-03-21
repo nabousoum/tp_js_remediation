@@ -101,14 +101,26 @@ button{
     width: 25%;
     border-radius: 50%;
 }
-#description{
+.description{
     position: fixed;
     width: 30%;
+    height: 90%;
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     display: none;
 }
-
+.description::-webkit-scrollbar{
+    width:10px;
+    height:5px
+}
+.description::-webkit-scrollbar-thumb{
+    background: plum;
+    border-radius: 10px;
+}
+.showDescription{
+    display: block;
+}
 #title{
     display: flex;
     justify-content: center;
@@ -134,4 +146,8 @@ span{
 #reciepe{
     background-color: white;
     flex: 4;
+}
+p{
+    font-size: large;
+    font-weight: bold;
 }
