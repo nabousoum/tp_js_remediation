@@ -21,10 +21,11 @@ function getRandomMeals(url){
 
 
     function showMeal(data){
-        console.log(data.meals);
+       // console.log(data);
 
         const div1 = document.createElement('div');
         div1.setAttribute('class','generateMeal');
+        div1.setAttribute('data-id',data.idMeal)
 
         const div11 = document.createElement('div');
         div11.setAttribute('class','divImg');
@@ -44,6 +45,7 @@ function getRandomMeals(url){
 
         const i = document.createElement('i');
         i.setAttribute('class','fa-solid fa-heart fa-2x');
+        i.setAttribute('id','like');
 
         div11.appendChild(img);
         div12.appendChild(p);
@@ -64,6 +66,24 @@ function getRandomMeals(url){
          }
          else{
             cont2.innerHTML="";
-             getRandomMeals(api_url);
+             getRandomMeals(generate_meals);
          }
      })
+    
+
+     cont2.addEventListener('click',getMealRecipes);
+     function getMealRecipes(e){
+         e.preventDefault();
+        //if(e.target.classList.contains('fa-solid fa-heart fa-2x')){
+            let mealItem = e.target.parentElement.parentElement;
+           // console.log(mealItem);
+            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+            .then(response => response.json())
+            .then( data => {
+                mealRecipeModel(data.meals)
+            })
+        }
+     function mealRecipeModel(meal){
+        // console.log(meal);
+         meal=meal[0];
+     }
