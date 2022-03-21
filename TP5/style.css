@@ -96,8 +96,8 @@ body{
     visibility: visible;
 }
 .textCentrer{
-    transform: translateY(160%);
-    transition:transform 0.3s ease-in;
+    transform: translateX(110vw);
+    transition:transform 0.2s ease-in;
     /* justify-content: center;
     display: flex;
     align-items: center; */
@@ -110,7 +110,7 @@ body{
     bottom: 0;
 }
 .movie:hover .textCentrer{
-    transform: translateY(0);
+    transform: translateX(0);
 }
 .nameMovie{
     flex: 1;
