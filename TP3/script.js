@@ -43,7 +43,6 @@ g.addEventListener('click',gauche);
 d.addEventListener('click',droite);
 
 setInterval(gauche, 5000);
-
 function afficherBouton(){
     if(p==-nbr+1)
     g.style.visibility="hidden";

@@ -25,22 +25,26 @@ const TabMenu = [
             {
                 'icon1' :'fa-regular fa-circle',
                 'label':'ChartJs',
-                'icon2':''
+                'icon2':'',
+                'sousMenu':''
             },
             {
                 'icon1' :'fa-regular fa-circle',
                 'label':'FLot',
-                'icon2':''
+                'icon2':'',
+                'sousMenu':''
             },
             {
                 'icon1' :'fa-regular fa-circle',
                 'label':'Inline',
-                'icon2':''
+                'icon2':'',
+                'sousMenu':''
             },
              {
                 'icon1' :'fa-regular fa-circle',
                 'label':'uPlot',
-                'icon2':''
+                'icon2':'',
+                'sousMenu':''
             }
         ]
     },  
@@ -91,27 +95,9 @@ function reBuild(){
         i2.setAttribute('class',element.icon2);
         
         div.addEventListener('click',function(){
-           // div.setAttribute('id','charts');
-            const div2 = document.createElement('div');
-            div2.setAttribute('id','chart2');
-            div2.setAttribute('class','chart');
-
-            const div3 = document.createElement('div');
-            //div2.setAttribute('id','chart2');
-            div3.setAttribute('class','chart2');
-            const i = document.createElement('i');
-            i.setAttribute('class',element.icon1);
-        
-            const p = document.createElement('p');
-            p.innerText=element.label;
-        
-            const i2 = document.createElement('i');
-            i2.setAttribute('class',element.icon2);
-            div3.appendChild(i);
-            div3.appendChild(p);
-            div3.appendChild(i2);
-            div2.appendChild(div3);
-            console.log(div2);
+            //on applique l event dans les div ayant un sous-menu
+            //appel fonction avec parametre avec valeur de retour
+            //reBuild();
         })
     
         div.appendChild(i);
@@ -131,22 +117,3 @@ reBuild();
 burger.addEventListener('click',function(){
     menu.classList.toggle('close');
 })
-
-
-//sousMenu.forEach(el => {
-    //     const div = document.createElement('div');
-    //     div.setAttribute('id','chart2');
-    //     div.setAttribute('class','chart');
-    //     const i = document.createElement('i');
-    //     i.setAttribute('class',el.icon1);
-
-    //     const p = document.createElement('p');
-    //     p.innerText=el.label;
-
-    //     const i2 = document.createElement('i');
-    //     i2.setAttribute('class',el.icon2);
-    //     div.appendChild(i);
-    //     div.appendChild(p);
-    //     div.appendChild(i2);
-    // });
-   

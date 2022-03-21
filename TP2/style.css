@@ -17,16 +17,16 @@ body{
     width: 80px;
 }
 .menu.close p{
-    opacity: 0;
+    display: none;
 }
 .menu.close .fa-solid.fa-angle-left{
-    opacity: 0;
+    display: none;
 }
 .menu.close #searchIcon{
-    opacity: 0;
+    display: none;
 }
 .menu.close #searchInput{
-    opacity: 0;
+    display: none;
 }
 #blankPage{
     display: flex;
@@ -181,6 +181,7 @@ display: flex;
   color: white;
 }
 .fa-solid.fa-angle-left{
-   margin-left: 30%;
+   display: flex;
+   justify-content: flex-end;
    margin-top: 5%;
 }
