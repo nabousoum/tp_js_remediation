@@ -110,9 +110,10 @@ button{
     z-index: 3;
 }
 .meal-details{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
+    width: 600px;
+    left: 30%;
+    top: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,8 +146,8 @@ span{
     display: flex;
     justify-content: center;
     position: absolute; 
-    left:80%;
-    top:3%;
+    left: 50%;
+    top:1%;
     background-color: white;
     border-radius: 50%;
     width: 35px;
