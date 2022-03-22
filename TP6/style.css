@@ -4,9 +4,6 @@
 }
 body{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 #main{
     position: relative;
@@ -14,6 +11,8 @@ body{
     display: flex;
     background-color: #EEEEEE;
     width: 40%;
+    margin-left: 30%;
+    margin-top: 1%;
 }
 #container{
     display: flex;
@@ -102,52 +101,39 @@ button{
     border-radius: 50%;
 }
 .meal-details-content{
+    margin-top: -20%;
     background-color: white;
-    width: 100%;
-    margin: 5%;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    z-index: 3;
 }
 .meal-details{
     position: absolute;
-    width: 30%;
-    height: 80%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid white;
-    background-color: #F3E1FF;
-    border-radius: 10px;
-    overflow-y: scroll;
+    background-color: transparent;
     display: none;
+    animation: bounce;
+    animation-duration: 2s; 
 }
 .meal-details.showDescription{
     display: flex;
 }
- .meal-details::-webkit-scrollbar{
+ #reciepe::-webkit-scrollbar{
     width:10px;
     height:5px
 }
-.meal-details::-webkit-scrollbar-thumb{
+#reciepe::-webkit-scrollbar-thumb{
     background: plum;
     border-radius: 10px;
 }
-/* .description{
-    position: fixed;
-    width: 30%;
-    height: 90%;
-    display: flex;
-    overflow-y: scroll;
-    flex-direction: column;
-    display: none;
-}
-.descriptionContent{
-    width: 100%;
-    margin: 2%;
-    background-color: white;
-} */
 
-/* .description.showDescription{
-    display: block;
-}  */
 #title{
     display: flex;
     justify-content: center;
@@ -181,6 +167,8 @@ span{
 #reciepe{
     background-color: white;
     flex: 4;
+    height: 200px;
+    overflow-y: scroll;
 }
 p{
     font-size: large;
