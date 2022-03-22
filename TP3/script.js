@@ -3,9 +3,9 @@
 //   container.addEventListener('mouseover',function(){
 //     container.classList.toggle('zoom');
 // })
-document.body.onload=function(){
+function caroussel(){
     nbr=5;
-    p=0;
+    pos=0;
    
     const g = document.getElementById('g');
     const d = document.getElementById('d');
@@ -20,21 +20,21 @@ document.body.onload=function(){
     }
 
 }
-
+caroussel();
 function gauche(){
    // g.addEventListener('click',function(){
-        if(p>-nbr+1)
-        p--;
-        container.style.transform="translate("+p*800+"px)";
+        if(pos>-nbr+1)
+        pos--;
+        container.style.transform="translate("+pos*800+"px)";
         container.style.transition="all 0.5s ease";
         afficherBouton();
    // })
 }
 function droite(){
    // d.addEventListener('click',function(){
-        if(p<0)
-        p++;
-        container.style.transform="translate("+p*800+"px)";
+        if(pos<0)
+        pos++;
+        container.style.transform="translate("+pos*800+"px)";
         container.style.transition="all 0.5s ease";
         afficherBouton();
     //})
@@ -44,11 +44,11 @@ d.addEventListener('click',droite);
 
 setInterval(gauche, 5000);
 function afficherBouton(){
-    if(p==-nbr+1)
+    if(pos==-nbr+1)
     g.style.visibility="hidden";
     else
     g.style.visibility="visible";
-    if(p==0)
+    if(pos==0)
     d.style.visibility="hidden";
     else
     d.style.visibility="visible";

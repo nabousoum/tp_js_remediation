@@ -101,7 +101,36 @@ button{
     width: 25%;
     border-radius: 50%;
 }
-.description{
+.meal-details-content{
+    background-color: white;
+    width: 100%;
+    margin: 5%;
+}
+.meal-details{
+    position: fixed;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color: #F3E1FF;
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: none;
+}
+.meal-details.showDescription{
+    display: block;
+}
+ .meal-details::-webkit-scrollbar{
+    width:10px;
+    height:5px
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: plum;
+    border-radius: 10px;
+}
+/* .description{
     position: fixed;
     width: 30%;
     height: 90%;
@@ -110,17 +139,15 @@ button{
     flex-direction: column;
     display: none;
 }
-.description::-webkit-scrollbar{
-    width:10px;
-    height:5px
-}
-.description::-webkit-scrollbar-thumb{
-    background: plum;
-    border-radius: 10px;
-}
-.showDescription{
+.descriptionContent{
+    width: 100%;
+    margin: 2%;
+    background-color: white;
+} */
+
+/* .description.showDescription{
     display: block;
-}
+}  */
 #title{
     display: flex;
     justify-content: center;
@@ -129,9 +156,17 @@ button{
     background-color: white;
 }
 span{
-   position: absolute;
-   right: 0;
-   margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    left:80%;
+    top:3%;
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: black;
+    border: 1px solid black;
     font-size: x-large;
     font-weight: bold;
 }
