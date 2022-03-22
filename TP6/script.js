@@ -128,4 +128,7 @@ function getRandomMeals(url){
             mealDetails.classList.add('showDescription');
             mealDetails.innerHTML="";
             mealDetails.appendChild(mealDetailsContent);
+            span.addEventListener('click',function(){
+                mealDetails.classList.remove('showDescription');
+            })
     }
