@@ -105,19 +105,18 @@ button{
     background-color: white;
     width: 500px;
     height: 200px;
-    border-radius: 10px;
-    border: 2px solid pink;
+    border-radius: 20px;
+    box-shadow: rgba(241, 21, 230, 0.4) 0px 30px 90px;
     z-index: 3;
 }
 .meal-details{
     position: fixed;
     width: 600px;
-    left: 30%;
+    left: 32%;
     top: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
     background-color: transparent;
     display: none;
     animation: bounce;
@@ -168,7 +167,7 @@ span{
 #reciepe{
     background-color: white;
     flex: 4;
-    height: 200px;
+    height: 250px;
     overflow-y: scroll;
 }
 p{
