@@ -112,10 +112,13 @@ function getRandomMeals(url){
             p2.innerText='Ingredients';
             const ul = document.createElement('ul');
             const li = document.createElement('li');
-            li.innerText=meal.strIngredient1;
-    
-    
-            ul.appendChild(li);
+            for(var i=1;i<=20;i++){
+                if(meal["strIngredient"+i]!==''){
+                    const li = document.createElement('li');
+                    li.innerText = meal["strIngredient"+i];
+                    ul.appendChild(li);
+                }
+            }
             div3.appendChild(p);
             div3.appendChild(p2);
             div3.appendChild(ul);
