@@ -182,6 +182,5 @@ display: flex;
 }
 .fa-solid.fa-angle-left{
    display: flex;
-   justify-content: flex-end;
-   margin-top: 5%;
+  margin-top: 5%;
 }

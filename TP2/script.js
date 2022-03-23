@@ -98,6 +98,7 @@ function reBuild(){
             //on applique l event dans les div ayant un sous-menu
             //appel fonction avec parametre avec valeur de retour
             //reBuild();
+            //stopPropagation()
         })
     
         div.appendChild(i);

@@ -3,12 +3,16 @@ const container = document.getElementById('container');
 const movies = document.getElementById('movies');
 const inputSearch = document.getElementById('search');
 const form = document.getElementById('form');
+const box = document.querySelector('.box');
 
 
 const SEARCH_API ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
- let api_url="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+ let api_url="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=";
 
- getMovies(api_url);
+ window.addEventListener('load',() =>{
+    getMovies(api_url);
+    box.className+= ' hidden';
+})
 
 function getMovies(url){
     fetch(url).then((reponse) => 
@@ -77,4 +81,15 @@ inputSearch.addEventListener('keyup',function(e){
         movies.innerHTML="";
         getMovies(api_url);
     }
+})
+var i=1;
+window.addEventListener('scroll',()=>{
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    if(Math.ceil(scrolled) === scrollable){
+        i++;
+        getMovies(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=${i}`);
+
+    }
+
 })
