@@ -119,9 +119,11 @@ button{
     align-items: center;
     background-color: transparent;
     display: none;
-    animation: bounce;
+    animation: fadeIn;
     animation-duration: 2s; 
 }
+
+  
 .meal-details.showDescription{
     display: flex;
 }
@@ -155,6 +157,8 @@ span{
     border: 1px solid black;
     font-size: x-large;
     font-weight: bold;
+    animation:zoomOutUp;
+    animation-duration: 3s; 
 }
 #imgDesc{
     flex: 4;
