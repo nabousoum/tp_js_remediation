@@ -13,7 +13,7 @@ for(var i=0;i< buttons.length;i++){
         right.appendChild(divNotif);
         var cssObj = window.getComputedStyle(this);
         //console.log(cssObj.backgroundColor);
-        //on peut creer des attributs data-color
+        //We can also create attributes  data-color
         var color = cssObj.backgroundColor;
         divNotif.style.backgroundColor = color;
         setTimeout(() => {

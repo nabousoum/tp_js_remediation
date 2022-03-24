@@ -1,3 +1,101 @@
-body{
-    
+*{
+    box-sizing: border-box;
+    color: white;
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    left: 0;
+    height: 100%;
+    background-color: rgb(52,58,64);
+    display: flex;
+    flex-direction: column;
+}
+
+#admin{
+    flex: 1;
+    display: flex;
+    border-bottom: 1px solid white;
+}
+#adminPic{
+    border-bottom: 1px solid white;
+    display: flex;
+    flex: 1;
+ }
+ #search{
+     flex: 1;
+    display: flex;
+}
+#generateTab{
+    display: flex;
+    flex: 10;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    margin-left: -10%;
+}
+nav ul li{
+    line-height: 50px;
+    margin-left: -10%;
+}
+.li{
+    line-height: 50px;
+}
+nav ul li a{
+    margin-left: 7%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+nav ul li a:hover{
+    border-radius: 10px;
+    background:rgb(51,147,255);
+}
+#searchInput{
+    margin: 5%;
+}
+nav ul ul{
+    display: none ;
+}
+nav ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a{
+    font-size: 18px;
+    padding-left: 30px;
+}
+nav ul ul li i{
+   margin-left: 30%;
+   margin-top: 20%;
+}
+nav ul li a span{
+    position: absolute;
+    top: 43%;
+    right:10px;
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+}
+small{
+    font-size: x-large;
+    margin-left: 20%;
+}
+nav ul li a:hover span{
+    transform: translateY(-50%) rotate(-180deg);
+}
+nav ul .chart-show.show{
+    display: block;
+}
+.fa-regular.fa-circle{
+    margin-top: 10%;
+}
+.fa-solid {
+    margin-top: 5%;
 }
